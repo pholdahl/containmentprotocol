@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Containment Protocol]</title>
+    <link rel="stylesheet" type="text/css" href="memory.css">
+    <script src="memory.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div id="overlay">
+        <h1>[Containment Protocol]</h1>
+        <button class="ui-button" id="instruct-button">Instructions</button>
+        <div id="instructions">
+        </div>
+        <div id="overlay-buttons">
+            <button class="ui-button hidden" id="start-button" onclick="startGame()">Start</button>
+            <button class="sound-button ui-button hidden" onclick="muteSound()">Sound</button>
+        </div>
+    </div>
+    <h3 class="ui-text" id="score">Score:<span class="ui-text" id="result"></span></h3>
+
+    <section id="game">
+        <div id="grid-container" class="outer-size">
+            <div id="grid" class="inner-size">
+            </div>
+        </div>
+    </section>
+    <section id="ui-buttons">
+        <button class="ui-button" onclick="window.location.href = '/index.html'">Reload</button>
+        <button class="sound-button ui-button" onclick="muteSound()">Sound</button>
+    </section>
+    <audio id="audio1"></audio>
+    <audio id="audio2"></audio>
+    <audio id="audio3"></audio>
+</body>
+</html>

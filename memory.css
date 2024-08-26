@@ -1,0 +1,307 @@
+:root {
+    background-color: #000000;
+    color: #00ff00;
+    color: #00ff00;
+    text-align: center;
+    --black: #000000;
+    --red: #FF0000;
+    --green: #00FF00;
+    --game-width: 802px;
+    font-size: 20px;
+    --ui-font-size: 20px;
+    --ui-header-font-size: 30px;
+}
+
+body {
+    widht: 100vw;
+}
+
+audio {
+    display: none;
+}
+
+.outer-size {
+    border: 1px solid var(--black);
+    /* padding: 20px;
+    max-width: 402px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px auto; */
+}
+
+.light {
+    border: 1px solid var(--black);
+    margin: 5px;
+    border-radius: 50%;
+    flex: 1 1 auto;
+    max-width: calc(100%/4);
+    aspect-ratio: 1/1;
+    max-width: 50px;
+}
+
+
+.light-off {
+    background-color: var(--black);
+    border-color: var(--black);
+    opacity: 0.5;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+
+.green {
+    background-color: var(--green);
+    box-shadow: 0 0 10px 2px var(--green);
+}
+
+.red {
+    background-color: var(--red);
+    box-shadow: 0 0 10px 2px var(--red);
+}
+
+/* .inner-size {
+    outline: 2px solid #000000;
+    padding: 1px;
+    width: 100%;
+    border-radius: 10px;
+} */
+
+.panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: radial-gradient(#75767B, #232429, #232324);
+    padding: 20px;
+    max-width: var(--game-width);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#grid-container {
+    background-image: radial-gradient(#75767B, #232429, #232324);
+    border: 1px solid var(--black);
+    padding: 20px;
+    max-width: var(--game-width);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#grid {
+    background-image: radial-gradient(var(--black), #232324);
+    outline: 2px solid var(--black);
+    padding: 1px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.brighten {
+    filter: brightness(1.05);
+}
+
+.darken {
+    filter: brightness(0.7);
+}
+
+.darkest {
+    filter: brightness(0.3);
+}
+
+/* #grid > .card {
+    padding: 2px;
+    width: 100px;
+    height: 100px;
+} */
+
+
+/* SOUND */
+.sound-button {
+
+}
+
+.sound-off {
+    text-decoration: line-through;
+}
+
+
+/* CARDS */
+
+.card {
+    width: calc(var(--game-width)/4);
+    height: calc(var(--game-width)/4*1.1);
+    /* height: 75px; */
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid #232429;
+    background-color: linear-gradient(#3498db, #2980b9);
+    font-size: 4rem;
+    user-select: none;
+    line-height: 60px;
+    transition: opacity 0.3s;
+}
+
+.card:hover {
+    opacity: 0.8;
+}
+
+.fontBright {
+    color: #ffffff;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.fontDark {
+    color: #000000;
+    text-shadow:1px 1px 5px #000, 1px 1px 5px #000;
+}
+
+.darkCircle {
+    background-image: radial-gradient(#000000, #060C0C);
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 5px #000, 1px 1px 10px 5px #000;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 0.3
+}
+
+
+/* OVERLAY */
+
+#overlay {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--ui-header-font-size);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0.9;
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#instructions {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--ui-font-size);
+    white-space: pre-wrap;
+    text-align: left;
+    margin: 20px;
+    width: 80%;
+    max-width: var(--game-width);
+}
+
+
+/* UI */
+.ui-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--ui-font-size);
+    color: #00ff00;
+}
+
+.ui-button {
+    background-color: #222;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    font-size: var(--ui-font-size);
+    cursor: pointer;
+    margin-top: 20px;
+    maring: 0 auto;
+    border-radius: 10px;
+}
+
+.ui-button:hover {
+    background-color: #00ff00;
+    color: #222;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media only screen 
+and (min-width: 414px)
+and (max-width: 736px){
+    :root{
+        --ui-font-size: 44px;
+    }
+
+    #grid-container {
+        max-width: 700px;
+        width: 600px;
+    }
+
+    .card {
+        width: 70px;
+        height: 60px;
+        font-size: 3em;
+    }
+
+    .light {
+        max-width: 40px;
+    }
+
+    #instructions {
+        font-size: 50px;
+        margin: 10px;
+    }
+
+    .ui-button {
+        font-size: var(--ui-font-size);
+        padding: 8px 16px;
+    }
+
+    #grid > .card {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root{
+        --ui-font-size: 20px;
+    }
+
+    #grid-container {
+        max-width: 700px;
+        width: 600px;
+    }
+
+    .card {
+        width: 140px;
+        height: 55px;
+        font-size: 2.5em;
+    }
+
+    .light {
+        max-width: 35px;
+    }
+
+    /* #instructions {
+        font-size: 16px;
+    } */
+
+    .ui-button {
+        font-size: var(--ui-font-size);
+        padding: 6px 12px;
+    }
+
+    #grid > .card {
+        width: 170px;
+        height: 170px;
+    }
+}
