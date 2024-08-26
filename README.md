@@ -34,7 +34,7 @@ Containment Protocol is an interactive memory game where the player must match p
 ## Features
 
 - **Dynamic Grid:** The grid dynamically adjusts based on the number of cards.
-- **Retro Design:** A terminal-like UI with glowing text and pixel-perfect alignment.
+- **Retro Design:** A terminal-like UI with glowing text.
 - **Sound Effects:** Includes ambient background sounds and sound effects that enhance the gaming experience.
 - **Progressive Difficulty:** Each level adds more cards, increasing the challenge.
 
